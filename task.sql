@@ -5,11 +5,11 @@ DELIMITER //
 CREATE PROCEDURE get_warehouse_product_inventory(IN WarehouseID INT)
 BEGIN
 SELECT 
-        p.Name AS ProductName, 
-        pi.WarehouseAmount AS Amount
+        Products.Name AS ProductName, 
+        ProductInventory.WarehouseAmount AS Amount
     FROM 
-        ProductInventory pi
-        JOIN Products p ON pi.ProductID = p.ID
+        ProductInventory
+        JOIN Products ON ProductInventory.ProductID = Products.ID
     WHERE 
-        pi.WarehouseID = WarehouseID;
+        ProductInventory.WarehouseID = WarehouseID;
 END //
