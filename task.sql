@@ -6,10 +6,9 @@ CREATE PROCEDURE get_warehouse_product_inventory(
     IN HouseID INT
     )
 BEGIN
-    SELECT P.Name, WarehouseAmount
-    FROM ProductInventory AS PI
-    JOIN Products AS P ON PI.ProductID=P.ID
-    WHERE PI.WarehouseID=HouseID;
+    SELECT Products.Name, WarehouseAmount FROM ProductInventory AS ProdInv
+    JOIN Products ON ProdInv.ProductID=Products.ID
+    WHERE ProdInv.WarehouseID=HouseID;
 END //
 DELIMITER ;
 
