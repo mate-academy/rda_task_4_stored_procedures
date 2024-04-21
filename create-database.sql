@@ -51,3 +51,4 @@ INSERT INTO ProductInventory (ID,ProductID,WarehouseAmount,WarehouseID)
 	VALUES (1, 1, 2, 1);
 INSERT INTO ProductInventory (ID,ProductID,WarehouseAmount,WarehouseID)
 	VALUES (2, 1, 4242, 2);
+    
