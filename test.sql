@@ -1,3 +1,3 @@
 USE ShopDB; 
 
-CALL get_warehouse_product_inventory(1);
+CALL get_warehouse_product_inventory(2);
