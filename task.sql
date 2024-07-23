@@ -10,4 +10,4 @@ BEGIN
   ON Products.ID = ProductInventory.ProductID
   WHERE ProductInventory.WarehouseID = WarehouseID;
 END //
-DELIMITER;
+DELIMITER ;
