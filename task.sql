@@ -1,12 +1,10 @@
 USE ShopDB;
 
-DELIMITER//
+DELIMITER //
 
-CREATE PROCEDURE get_warehouse_product_inventory( 
-	IN IDFilter INT
-)
+CREATE PROCEDURE get_warehouse_product_inventory(IN IDFilter INT)
 BEGIN
-    SELECT WarehouseAmount FROM ProductInventory WHERE WarehouseID=IDFilter;
-END//
+    SELECT WarehouseAmount FROM ProductInventory WHERE WarehouseID = IDFilter;
+END //
 
-DELIMITER;
+DELIMITER ;
