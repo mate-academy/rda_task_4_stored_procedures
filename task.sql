@@ -1,3 +1,8 @@
-USE ShopDB; 
+USE ShopDB;
 
--- Create your stored procedure here
+CREATE PROCEDURE get_warehouse_product_inventory( 
+	IN IDFilter INT
+)
+BEGIN
+    SELECT WarehouseAmount FROM ProductInventory WHERE WarehouseID=IDFilter;
+END;
