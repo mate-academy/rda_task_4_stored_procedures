@@ -5,7 +5,7 @@ CREATE PROCEDURE get_warehouse_product_inventory(
     IN WarehouseIDFilter INT
 )
 BEGIN
-SELECT WarehouseAmount AS TotalAmount, Products.Name AS ProductName
+SELECT ProductInventory.WarehouseAmount AS TotalAmount, Products.Name AS ProductName
 FROM ProductInventory
          JOIN Products ON ProductInventory.ProductID = Products.ID
 WHERE WarehouseID = WarehouseIDFilter
