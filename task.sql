@@ -4,7 +4,7 @@ USE ShopDB;
 
 DELIMITER //
 CREATE PROCEDURE get_warehouse_product_inventory(
-	IN WerehouseID INT
+	IN WarehouseID INT
 )
 BEGIN
     SELECT
