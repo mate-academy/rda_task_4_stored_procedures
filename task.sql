@@ -13,6 +13,6 @@ BEGIN
     FROM ProductInventory PI
     INNER JOIN Products P
     ON PI.ProductID = P.ID
-    WHERE PI.WarehouseID = WerehouseID;
+    WHERE PI.WarehouseID = WarehouseID;
 END //
 DELIMITER ;
