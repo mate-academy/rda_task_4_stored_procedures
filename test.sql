@@ -2,9 +2,7 @@ USE ShopDB;
 
 DELIMITER //
 
-CREATE PROCEDURE get_warehouse_product_inventory(
-IN warehouse_id INT
-)
+CREATE PROCEDURE get_warehouse_product_inventory (IN warehouse_id INT)
 BEGIN
     SELECT
         p.Name AS ProductName,
