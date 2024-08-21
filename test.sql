@@ -3,18 +3,18 @@ USE ShopDB;
 DELIMITER //
 
 CREATE PROCEDURE get_warehouse_product_inventory(
-IN WarehouseID INT
+IN warehouse_id INT
 )
 BEGIN
     SELECT
-        name.Name AS ProductName,
-        amount.WarehouseAmount
+        p.Name AS ProductName,
+        pi.WarehouseAmount
     FROM
-        ProductInventory amount
+        ProductInventory pi
     JOIN
-        Products name ON amount.ProductID = name.ID
+        Products p ON pi.ProductID = p.ID
     WHERE
-        amount.WarehouseID = WarehouseID;
+        pi.WarehouseID = warehouse_id;
 END //
 
 DELIMITER ;
