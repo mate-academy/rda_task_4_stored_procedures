@@ -4,14 +4,14 @@ USE ShopDB;
 
 DELIMITER //
 CREATE PROCEDURE get_warehouse_product_inventory(
-    IN WarehouseID INT
+  IN WarehouseID INT
 )
 
 BEGIN
-    SELECT Products.name, ProductInventory.WarehouseAmount;
-    FROM Products
-    INNER JOIN ProductInventory
-    ON ProductID = ProductInventory.ProductID
-    WHERE ProductInventory.WarehouseID = WarehouseID;
+  SELECT Products.Name, ProductInventory.WarehouseAmount
+  FROM Products
+  INNER JOIN ProductInventory
+  ON Products.ID = ProductInventory.ProductID
+  WHERE ProductInventory.WarehouseID = WarehouseID;
 END //
 DELIMITER ;
