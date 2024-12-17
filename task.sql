@@ -1,6 +1,6 @@
-DELIMITER $$
 USE ShopDB;
-CREATE PROCEDURE get_warehouse_product_inventory(IN warehouse_id INT)  
+DELIMITER $$
+CREATE PROCEDURE get_warehouse_product_inventory(IN warehouse_id INT)
 BEGIN  
 
     SELECT   
