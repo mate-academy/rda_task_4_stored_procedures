@@ -1,3 +1,17 @@
-USE ShopDB; 
+USE ShopDB;
+DELIMITER $$
+CREATE PROCEDURE get_warehouse_product_inventory(IN warehouse_id INT)
+BEGIN  
 
--- Create your stored procedure here
+    SELECT   
+        prod.Name,  
+        pi.WarehouseAmount  
+    FROM   
+        ProductInventory pi  
+    JOIN   
+        Products prod ON pi.ProductID = prod.ID
+    WHERE   
+        pi.WarehouseID = warehouse_id;  
+END $$  
+
+DELIMITER ;
