@@ -12,6 +12,6 @@ BEGIN
     INNER JOIN Products
     ON ProductInventory.ProductID = Products.ID
     WHERE 
-        ProductInventory.WarehouseID = WarehouseID
+        ProductInventory.WarehouseID = WarehouseID;
 END //
 DELIMITER ;
