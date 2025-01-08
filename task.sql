@@ -4,10 +4,14 @@ DELIMITER $$
 CREATE PROCEDURE get_warehouse_product_inventory(IN WarehouseID INT)
 BEGIN
     SELECT
-        ProductID AS ProductName,
-        WarehouseAmount AS Amount
+        Products.Name AS ProductName,
+        ProductInventory.WarehouseAmount AS Amount
     FROM
-        ProductInventory;
+        ProductInventory
+    JOIN
+        Products ON ProductInventory.ProductID = Products.ID
+    WHERE
+        ProductInventory.WarehouseID = WarehouseID;
 END$$
 
 DELIMITER ;
