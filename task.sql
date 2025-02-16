@@ -13,6 +13,3 @@ CREATE PROCEDURE get_warehouse_product_inventory(
 
     END //
 DELIMITER ;
-
-
-CALL get_warehouse_product_inventory()
